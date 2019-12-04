@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  repository_dispatch:
+    types: on-demand-test
+
+jobs:
+  build:
+    name: Hello
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Echo hello
+      run: echo 'Hello'
